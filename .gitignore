@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Node / Next.js
+app/node_modules/
+app/.npm-cache/
+app/.next/
+
+# Local env
+app/.env
+app/.env.local
+app/.env.*.local
+
+# Runtime data (generated locally)
+app/data/interview-library.json
+app/data/deep-research-jobs.json
+app/data/*.tmp
+
+# Runtime logs (generated locally)
+开发日志.runtime.ndjson

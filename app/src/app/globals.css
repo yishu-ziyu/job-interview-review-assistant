@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f1e6;
+  --surface: #fffdf7;
+  --foreground: #141a21;
+  --muted: #5f6875;
+  --border: #d0c3ab;
+  --brand: #0d5d6d;
+  --brand-strong: #093f4d;
+  --ok: #2f7f53;
+  --warn: #ad6b1f;
+  --risk: #9d3428;
+  --font-body: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC",
+    sans-serif;
+  --font-display: "Songti SC", "STSong", "STKaiti", "KaiTi", serif;
+  --font-code: "JetBrains Mono", "Fira Code", "SFMono-Regular", ui-monospace, monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-risk: var(--risk);
+  --font-sans: var(--font-body), "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC",
+    sans-serif;
+  --font-serif: var(--font-display), "Songti SC", "STSong", serif;
+  --font-mono: var(--font-code), "JetBrains Mono", "Fira Code", "SFMono-Regular", ui-monospace,
+    monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  background-image:
+    radial-gradient(circle at 12% -10%, rgba(13, 93, 109, 0.22), transparent 42%),
+    radial-gradient(circle at 100% 0%, rgba(173, 107, 31, 0.18), transparent 38%),
+    repeating-linear-gradient(
+      130deg,
+      rgba(16, 24, 32, 0.02) 0,
+      rgba(16, 24, 32, 0.02) 1px,
+      transparent 1px,
+      transparent 11px
+    ),
+    linear-gradient(180deg, #f8f3e9 0%, #f2ebdf 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(rgba(20, 26, 33, 0.08) 0.35px, transparent 0.35px);
+  background-size: 3px 3px;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  letter-spacing: 0.02em;
+}
+
+.app-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.app-main {
+  position: relative;
+  z-index: 2;
+}
+
+.app-main > * {
+  animation: panel-rise 520ms cubic-bezier(0.18, 0.75, 0.28, 1.01);
+}
+
+.app-main > *:nth-child(2) {
+  animation-delay: 60ms;
+}
+
+.app-main > *:nth-child(3) {
+  animation-delay: 110ms;
+}
+
+.panel {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(255, 252, 245, 0.96)),
+    var(--surface);
+  border-color: color-mix(in srgb, var(--border) 82%, #8b6a3f 18%);
+  box-shadow:
+    0 24px 46px rgba(22, 31, 42, 0.09),
+    0 2px 0 rgba(255, 255, 255, 0.8) inset,
+    0 -1px 0 rgba(20, 26, 33, 0.06) inset;
+}
+
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(13, 93, 109, 0.14), transparent 32%),
+    linear-gradient(0deg, transparent, rgba(173, 107, 31, 0.08));
+}
+
+.mode-switch {
+  backdrop-filter: blur(8px);
+  border-color: color-mix(in srgb, var(--border) 70%, var(--brand) 30%);
+  box-shadow: 0 8px 20px rgba(20, 26, 33, 0.08);
+}
+
+.app-shell input,
+.app-shell textarea,
+.app-shell select {
+  border-color: color-mix(in srgb, var(--border) 74%, #988264 26%);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 1px 1px rgba(20, 26, 33, 0.04);
+}
+
+.app-shell input:focus-visible,
+.app-shell textarea:focus-visible,
+.app-shell select:focus-visible {
+  border-color: color-mix(in srgb, var(--brand) 78%, #ffffff 22%);
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--brand) 18%, transparent 82%),
+    0 8px 16px rgba(13, 93, 109, 0.12);
+}
+
+.app-shell button {
+  letter-spacing: 0.01em;
+}
+
+.panel .bg-white {
+  background: linear-gradient(180deg, rgba(255, 254, 250, 0.98), rgba(255, 250, 239, 0.95));
+  border-color: color-mix(in srgb, var(--border) 78%, #977752 22%);
+}
+
+.panel .bg-background {
+  background: color-mix(in srgb, var(--background) 86%, #fdfaf3 14%);
+}
+
+.app-shell .bg-brand {
+  background: linear-gradient(110deg, #0d5d6d 0%, #0a4e5b 100%);
+}
+
+.app-shell .bg-brand:hover {
+  filter: brightness(1.06);
+}
+
+.app-shell details[open] {
+  box-shadow: 0 8px 18px rgba(20, 26, 33, 0.06);
+}
+
+.app-shell summary {
+  list-style: none;
+}
+
+.app-shell summary::-webkit-details-marker {
+  display: none;
+}
+
+@keyframes panel-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

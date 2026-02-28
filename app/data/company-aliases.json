@@ -1,0 +1,188 @@
+{
+  "entries": [
+    {
+      "company": "字节跳动",
+      "aliases": [
+        "字节跳动",
+        "字节",
+        "抖音",
+        "飞书",
+        "今日头条",
+        "懂车帝",
+        "bytedance",
+        "doubao"
+      ]
+    },
+    {
+      "company": "腾讯",
+      "aliases": [
+        "腾讯",
+        "tencent",
+        "微信",
+        "qq",
+        "腾讯云"
+      ]
+    },
+    {
+      "company": "阿里巴巴",
+      "aliases": [
+        "阿里巴巴",
+        "阿里",
+        "alibaba",
+        "淘宝",
+        "天猫",
+        "支付宝",
+        "钉钉",
+        "夸克"
+      ]
+    },
+    {
+      "company": "百度",
+      "aliases": [
+        "百度",
+        "baidu",
+        "文心"
+      ]
+    },
+    {
+      "company": "美团",
+      "aliases": [
+        "美团"
+      ]
+    },
+    {
+      "company": "京东",
+      "aliases": [
+        "京东",
+        "jd.com",
+        "jd"
+      ]
+    },
+    {
+      "company": "小红书",
+      "aliases": [
+        "小红书",
+        "red"
+      ]
+    },
+    {
+      "company": "快手",
+      "aliases": [
+        "快手",
+        "kuaishou"
+      ]
+    },
+    {
+      "company": "拼多多",
+      "aliases": [
+        "拼多多",
+        "pdd",
+        "temu"
+      ]
+    },
+    {
+      "company": "华为",
+      "aliases": [
+        "华为",
+        "huawei"
+      ]
+    },
+    {
+      "company": "小米",
+      "aliases": [
+        "小米",
+        "xiaomi"
+      ]
+    },
+    {
+      "company": "网易",
+      "aliases": [
+        "网易",
+        "netease"
+      ]
+    },
+    {
+      "company": "哔哩哔哩",
+      "aliases": [
+        "哔哩哔哩",
+        "bilibili",
+        "b站"
+      ]
+    },
+    {
+      "company": "滴滴",
+      "aliases": [
+        "滴滴",
+        "didi"
+      ]
+    },
+    {
+      "company": "携程",
+      "aliases": [
+        "携程",
+        "trip.com"
+      ]
+    },
+    {
+      "company": "理想汽车",
+      "aliases": [
+        "理想汽车",
+        "理想"
+      ]
+    },
+    {
+      "company": "蔚来",
+      "aliases": [
+        "蔚来",
+        "nio"
+      ]
+    },
+    {
+      "company": "比亚迪",
+      "aliases": [
+        "比亚迪",
+        "byd"
+      ]
+    },
+    {
+      "company": "招商银行",
+      "aliases": [
+        "招商银行",
+        "招行",
+        "cmb"
+      ]
+    },
+    {
+      "company": "工商银行",
+      "aliases": [
+        "工商银行",
+        "工行",
+        "icbc"
+      ]
+    },
+    {
+      "company": "中国银行",
+      "aliases": [
+        "中国银行",
+        "中行",
+        "boc"
+      ]
+    },
+    {
+      "company": "建设银行",
+      "aliases": [
+        "建设银行",
+        "建行",
+        "ccb"
+      ]
+    },
+    {
+      "company": "农业银行",
+      "aliases": [
+        "农业银行",
+        "农行",
+        "abc"
+      ]
+    }
+  ]
+}
